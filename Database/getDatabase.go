@@ -1,4 +1,4 @@
-package main
+package Database
 
 import (
 	"fmt"
@@ -9,8 +9,7 @@ import (
 	"os"
 )
 
-// DBはじめ
-func StartDB() *gorm.DB {
+func GetDatabase() *gorm.DB {
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatal("Error loading .env file")
@@ -29,9 +28,6 @@ func StartDB() *gorm.DB {
 	if err != nil {
 		log.Fatal("Failed to connect to database:", err)
 	}
-
-	// データベースにテーブルを作成
-	db.AutoMigrate(&Hello{}) //本番のときはこれ消そう
+	SetSchema(db)
 	return db
-
 }
