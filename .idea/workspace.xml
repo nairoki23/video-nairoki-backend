@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99f8fd61-ada4-468c-b7e0-6ec1c4f9a249" name="変更" comment="DB部分離">
+    <list default="true" id="99f8fd61-ada4-468c-b7e0-6ec1c4f9a249" name="変更" comment="DB実験追加">
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/schema.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schema.go" beforeDir="false" afterPath="$PROJECT_DIR$/Database/getDatabase.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/schema.go" beforeDir="false" afterPath="$PROJECT_DIR$/Database/schema.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/server.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +105,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="とりま土台が完成。&#10;ここからいろんな機能をつけていく。" />
     <MESSAGE value="DB部分離" />
-    <option name="LAST_COMMIT_MESSAGE" value="DB部分離" />
+    <MESSAGE value="DB実験追加" />
+    <option name="LAST_COMMIT_MESSAGE" value="DB実験追加" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

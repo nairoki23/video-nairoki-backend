@@ -31,20 +31,5 @@ func main() {
 		return c.JSON(200, hello)
 	})
 
-	e.GET("/konnitiha", func(c echo.Context) error {
-		var konnitihas []Database.Konnitiha
-		db.Find(&konnitihas)
-		return c.JSON(200, konnitihas)
-	})
-
-	e.GET("/set-konnitiha", func(c echo.Context) error {
-		text := c.QueryParam("konnitiha")
-		konnitiha := &Database.Konnitiha{
-			Body: text,
-		}
-		db.Create(&konnitiha)
-		return c.JSON(200, konnitiha)
-	})
-
 	e.Logger.Fatal(e.Start(":1323"))
 }
