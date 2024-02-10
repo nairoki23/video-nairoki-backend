@@ -5,16 +5,30 @@ import (
 	"time"
 )
 
+type baseModel struct {
+	// UUID が主キーになり、UUID は Postgres が勝手に生成する
+	ID        string `gorm:"primaryKey;size:255;default:uuid_generate_v4()"`
+	CreatedAt time.Time
+	UpdatedAt time.Time
+}
+
 type Hello struct {
-	gorm.Model
+	baseModel
 	Body string `json:"body" gorm:"size:255"`
 }
 
 type Video struct {
-	ID        uint      // 主キーの標準フィールド
-	Title     string    // 通常の文字列フィールド
-	CreatedAt time.Time // GORMによって自動的に管理される作成時間
-	UpdatedAt time.Time // GORMによって自動的に管理される更新時間
+	baseModel
+	Title       string
+	Description string
+	ViewCount   uint
+	UserID      string `gorm:"primaryKey;size:255;default:uuid_generate_v4()"`
+}
+
+type User struct {
+	baseModel
+	Name  string
+	Video []Video
 }
 
 // DBはじめ
