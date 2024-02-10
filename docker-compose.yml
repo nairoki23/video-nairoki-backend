@@ -11,5 +11,6 @@ services:
     environment:
       POSTGRES_USER: 'video-nairoki'
       POSTGRES_PASSWORD: 'password'
+      POSTGRES_EXTENSIONS: uuid-ossp
 volumes:
   db-store:
